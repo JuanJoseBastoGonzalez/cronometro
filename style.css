@@ -1,12 +1,8 @@
-
-
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  
-
     background-image: url('images/diamante.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
@@ -21,38 +17,38 @@ body {
     width: 30%;
     height: auto;
     border: 1px solid black;
-    -webkit-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
-    -moz-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
     box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
 }
 
-
-
-.horas{
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
+.horas {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
 }
 
 .numeros {
-    font-size: 50px
+    font-size: 50px;
 }
-.buton{
+
+.buton {
     margin-top: 25px;
     font-size: 25px;
-    
 }
+
 .fa-solid {
     background: none;
     display: flex;
     justify-content: space-around;
 }
-.start{
+
+.start {
     height: 130px;
 }
-.pause{
+
+.pause {
     height: 130px;
 }
+
 .botones {
     background: none;
     display: flex;
@@ -61,10 +57,11 @@ body {
     margin-right: 10px;
 }
 
-
-
-.boton2{
+.boton2 {
     margin-left: 40px;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 button {
@@ -75,32 +72,45 @@ button {
     cursor: pointer;
 }
 
-#oneclik:hover, .boton1:hover {
+/* Efecto de hover */
+#oneclik:hover,
+.boton1:hover,
+#oneclik2:hover,
+.boton2:hover {
     transform: scale(1.1);
 }
 
-#oneclik2:hover, .boton2:hover {
-    transform: scale(1.1);
-}
-.reloj:hover{
+.reloj:hover {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.186);
+}
+
+/* Media query para dispositivos con ancho máximo de 600px */
+/* Media query para dispositivos con ancho máximo de 600px */
+@media screen and (max-width: 600px) {
+    .numeros {
+        font-size: 40px; /* Reducimos el tamaño de fuente de los números */
+    }
+
+    .botones {
+        flex-direction: column;
+        font-size: auto;
+        justify-self:center;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+        gap: 0;
+         /* Cambiamos la dirección de los botones a una columna */
+    }
+
+    button {
+        font-size: 3px; /* Reducimos el tamaño de fuente de los botones */
+        margin-bottom: 10px;
+        gap:0; 
+        /* Añadimos un margen inferior para separar los botones */
+    }
+    .boton2{
+        margin: 0 0;
+    }
     
 }
-
-.reloj {
-  
-    display: grid;
-    grid-template-columns: auto;
-    background-color: rgba(255, 255, 255, 0.106);
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: auto;
-    border: 1px solid black;
-    -webkit-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
-    -moz-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
-    box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
-    transition-duration: 1s;
-}
-
