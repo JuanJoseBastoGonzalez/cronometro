@@ -1,33 +1,44 @@
-* {
-    background: wheat;
-}
+
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+  
+
+    background-image: url('images/diamante.jpg');
+    background-size: cover; /* Para que la imagen de fondo cubra todo el cuerpo */
+    background-repeat: no-repeat;
 }
 
 .reloj {
     display: grid;
     grid-template-columns: auto;
-    background: rgb(252, 100, 100);
+    background-color: rgba(255, 255, 255, 0.146);
     align-items: center;
     justify-content: center;
     width: 40%;
     height: auto;
+    border: 1px solid black;
+    
 }
+
+
+
 .horas{
-    background:  rgb(252, 100, 100);
+        margin-top: 35px;
 }
 
 .numeros {
     font-size: 50px;
-    background:  rgb(252, 100, 100);
-    margin-top: 30px;
+  
+   
 }
-
+.buton{
+    margin-top: 25px;
+    font-size: 25px;
+}
 .fa-solid {
     background: none;
     display: flex;
@@ -38,7 +49,7 @@ body {
     background: none;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .fa-play {
