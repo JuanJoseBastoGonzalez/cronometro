@@ -55,7 +55,7 @@ function contarSegundos() {
         secondsElement.textContent = segundosFormateados;
 
         // Si los segundos alcanzan 60, reiniciamos los segundos y actualizamos los minutos
-        if (segundos == 2) {
+        if (segundos == 60) {
             
             segundos = 0;
             minutos++;
@@ -69,7 +69,7 @@ function contarSegundos() {
 
 
             // Si los minutos alcanzan 60, reiniciamos los minutos y actualizamos las horas
-            if (minutos > 1) {
+            if (minutos > 60) {
                 horas++;
                 horas = zfill(horas, 2); // Rellenamos las horas con ceros a la izquierda
 
@@ -80,7 +80,7 @@ function contarSegundos() {
         }
         
         // Detenemos el contador después de un minuto completo (60 segundos)
-        if (segundos == 2) {
+        if (segundos == 60) {
             clearInterval(intervalo);
         }
     }, 1000); // Ejecutar cada segundo (1000 milisegundos)
