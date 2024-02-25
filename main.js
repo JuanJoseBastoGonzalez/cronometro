@@ -21,8 +21,11 @@ oneclikButton.addEventListener('click', function() {
 
 function contarSegundos() {
     let segundos = 1;
-    minutos += 1;
+    minutos++ ;
     const intervalo = setInterval(function() {
+        segundos=zfill(segundos,2);
+        var secondsElemtens = document.getElementById("second");
+        secondsElemtens.textContent=segundos
         console.log(segundos);
         segundos++;
     }, 1000); // Ejecutar cada segundo (1000 milisegundos)
