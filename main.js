@@ -11,34 +11,42 @@ function zfill(number, width) {
 var minutos = 0;
 var horas = 0;
 var intervalo;
+var botonActual = 1; // Variable para controlar el estado actual del botón
 
-// Obtenemos el botón por su id
-var oneclikButton = document.getElementById('oneclik');
+// Obtenemos los botones por su id
+var boton1 = document.getElementById('oneclik');
+var boton2 = document.getElementById("oneclik2");
 
-// Añadimos un evento de click al botón
-oneclikButton.addEventListener('click', function() {
-    // Limpiamos cualquier intervalo anterior antes de comenzar uno nuevo
-    clearInterval(intervalo);
-    
-    // Cuando se hace clic en el botón, se llama a la función contarSegundos
-    contarSegundos();
+// Añadimos eventos de click a los botones
+boton1.addEventListener('click', function() {
+    if (botonActual === 1) { // Solo permitir acción del botón 1
+        // Limpiamos cualquier intervalo anterior antes de comenzar uno nuevo
+        clearInterval(intervalo);
+        
+        // Cuando se hace clic en el botón 1, se llama a la función contarSegundos
+        contarSegundos();
+        
+        // Cambiamos el estado del botón actual
+        botonActual = 2;
+    }
 });
 
+boton2.addEventListener("click", function() {
+    if (botonActual === 2) { // Solo permitir acción del botón 2
+        // Limpiamos cualquier intervalo anterior antes de comenzar uno nuevo
+        clearInterval(intervalo);
+        
+        segundos = 0;
+        minutos = 0;
+        horas = 0;
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("second").textContent = "00";
 
-var oneclikButton2 = document.getElementById("oneclik2");
-oneclikButton2.addEventListener("click",function(){
-
-    clearInterval(intervalo);
-    segundos = 0;
-    minutos = 0;
-    horas = 0;
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("second").textContent = "00";
-
-
-})
-
+        // Cambiamos el estado del botón actual
+        botonActual = 1;
+    }
+});
 
 function contarSegundos() {
     let segundos = 0;
@@ -56,7 +64,6 @@ function contarSegundos() {
 
         // Si los segundos alcanzan 60, reiniciamos los segundos y actualizamos los minutos
         if (segundos == 60) {
-            
             segundos = 0;
             minutos++;
             minutos = zfill(minutos, 2); // Rellenamos los minutos con ceros a la izquierda
@@ -65,11 +72,9 @@ function contarSegundos() {
             var minutesElement = document.getElementById("minutes");
             minutesElement.textContent = minutos;
 
-
-
-
             // Si los minutos alcanzan 60, reiniciamos los minutos y actualizamos las horas
-            if (minutos > 60) {
+            if (minutos == 60) {
+                minutos = 0;
                 horas++;
                 horas = zfill(horas, 2); // Rellenamos las horas con ceros a la izquierda
 
