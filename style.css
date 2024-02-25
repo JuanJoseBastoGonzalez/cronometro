@@ -8,23 +8,19 @@ body {
   
 
     background-image: url('images/diamante.jpg');
-    background-size: cover; /* Para que la imagen de fondo cubra todo el cuerpo */
+    background-size: cover; 
     background-repeat: no-repeat;
 }
 
 .reloj {
     display: grid;
     grid-template-columns: auto;
-    background-color: rgba(255, 255, 255, 0.146);
+    background-color: rgba(255, 255, 255, 0.106);
     align-items: center;
     justify-content: center;
     width: 30%;
     height: auto;
     border: 1px solid black;
-
-
-
-
     -webkit-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
     -moz-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
     box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
@@ -34,44 +30,41 @@ body {
 
 .horas{
         margin-top: 35px;
+        display: flex;
+        justify-content: center;
 }
 
 .numeros {
-    font-size: 50px;
-  
-   
+    font-size: 50px
 }
 .buton{
     margin-top: 25px;
     font-size: 25px;
+    
 }
 .fa-solid {
     background: none;
     display: flex;
     justify-content: space-around;
 }
-
+.start{
+    height: 130px;
+}
+.pause{
+    height: 130px;
+}
 .botones {
     background: none;
     display: flex;
     justify-content: space-around;
     margin-bottom: 35px;
+    margin-right: 10px;
 }
 
-.fa-play {
-    background: rgb(3, 238, 3);
-}
 
-.boton1 {
-    background: rgb(3, 238, 3);
-    margin-bottom: 5px;
-    border: 2px solid black;
-}
 
-.boton2 {
-    background: rgb(255, 11, 11);
-    margin-bottom: 5px;
-    border: 2px solid black;
+.boton2{
+    margin-left: 40px;
 }
 
 button {
@@ -82,6 +75,32 @@ button {
     cursor: pointer;
 }
 
-#oneclik:hover {
-    transform: scale(1.1); /* Corregido: transform en lugar de scale */
+#oneclik:hover, .boton1:hover {
+    transform: scale(1.1);
 }
+
+#oneclik2:hover, .boton2:hover {
+    transform: scale(1.1);
+}
+.reloj:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.186);
+    
+}
+
+.reloj {
+  
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgba(255, 255, 255, 0.106);
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
+    box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
+    transition-duration: 1s;
+}
+
