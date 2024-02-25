@@ -18,10 +18,16 @@ body {
     background-color: rgba(255, 255, 255, 0.146);
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
     height: auto;
     border: 1px solid black;
-    
+
+
+
+
+    -webkit-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
+    box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
 }
 
 
