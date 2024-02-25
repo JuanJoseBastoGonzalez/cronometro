@@ -84,17 +84,44 @@ button {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.186);
 }
-
+.pause-clone{
+    display: none;
+}
+.start-clone{
+    display: none;
+}
 /* Media query para dispositivos con ancho máximo de 600px */
 /* Media query para dispositivos con ancho máximo de 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     .numeros {
         font-size: 40px; /* Reducimos el tamaño de fuente de los números */
     }
+    .pause{
+        display: none;
+    }
+    .pause-clone{
+        display: block;
+        height: 130px;
+    }
 
+    .start{
+        display: none;
+    }
+    .start-clone{
+        display: block;
+        height: 130px;
+    }
+
+    .reloj{
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: whitesmoke
+}
     .botones {
         flex-direction: column;
         font-size: auto;
+      
         justify-self:center;
         align-items: center;
         margin-right: 0;
@@ -102,7 +129,7 @@ button {
         gap: 0;
          /* Cambiamos la dirección de los botones a una columna */
     }
-
+    
     button {
         font-size: 3px; /* Reducimos el tamaño de fuente de los botones */
         margin-bottom: 10px;
