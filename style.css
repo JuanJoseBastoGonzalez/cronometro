@@ -90,6 +90,39 @@ button {
 .start-clone{
     display: none;
 }
+
+
+
+/* Define la animación de crecimiento y reducción */
+@keyframes growAndShrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplica la animación cuando la clase "animate" está presente */
+.animate {
+    animation: growAndShrink 1s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media query para dispositivos con ancho máximo de 600px */
 /* Media query para dispositivos con ancho máximo de 600px */
 @media screen and (max-width: 720px) {

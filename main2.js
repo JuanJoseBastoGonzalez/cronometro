@@ -25,6 +25,12 @@ boton1.addEventListener('click', function() {
         
         // Cuando se hace clic en el botón 1, se llama a la función contarSegundos
         contarSegundos();
+
+        // Agregamos la clase de animación a los elementos con la clase "numeros"
+        var numerosElements = document.querySelectorAll('.numeros');
+        numerosElements.forEach(function(element) {
+            element.classList.add('animate');
+        });
         
         // Cambiamos el estado del botón actual
         botonActual = 2;
@@ -42,6 +48,12 @@ boton2.addEventListener("click", function() {
         document.getElementById("hours").textContent = "00";
         document.getElementById("minutes").textContent = "00";
         document.getElementById("second").textContent = "00";
+
+        // Eliminamos la clase de animación de los elementos con la clase "numeros"
+        var numerosElements = document.querySelectorAll('.numeros');
+        numerosElements.forEach(function(element) {
+            element.classList.remove('animate');
+        });
 
         // Cambiamos el estado del botón actual
         botonActual = 1;
@@ -90,14 +102,3 @@ function contarSegundos() {
         }
     }, 1000); // Ejecutar cada segundo (1000 milisegundos)
 }
-
-
-
-
-
-
-
-
-
-
-
