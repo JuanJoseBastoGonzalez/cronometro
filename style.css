@@ -1,0 +1,67 @@
+* {
+    background: wheat;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.reloj {
+    display: grid;
+    grid-template-columns: auto;
+    background: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+}
+
+.numeros {
+    font-size: 50px;
+    background: none;
+    margin-top: 30px;
+}
+
+.fa-solid {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.fa-play {
+    background: rgb(3, 238, 3);
+}
+
+.boton1 {
+    background: rgb(3, 238, 3);
+    margin-bottom: 5px;
+    border: 2px solid black;
+}
+
+.boton2 {
+    background: rgb(255, 11, 11);
+    margin-bottom: 5px;
+    border: 2px solid black;
+}
+
+button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#oneclik:hover {
+    transform: scale(1.1); /* Corregido: transform en lugar de scale */
+}
