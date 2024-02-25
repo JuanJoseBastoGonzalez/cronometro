@@ -7,7 +7,6 @@ body {
     background-size: cover; 
     background-repeat: no-repeat;
 }
-
 .reloj {
     display: grid;
     grid-template-columns: auto;
@@ -19,36 +18,29 @@ body {
     border: 1px solid black;
     box-shadow: 10px 6px 16px 5px rgba(0,0,0,1);
 }
-
 .horas {
     margin-top: 35px;
     display: flex;
     justify-content: center;
 }
-
 .numeros {
     font-size: 50px;
 }
-
 .buton {
     margin-top: 25px;
     font-size: 25px;
 }
-
 .fa-solid {
     background: none;
     display: flex;
     justify-content: space-around;
 }
-
 .start {
     height: 130px;
 }
-
 .pause {
     height: 130px;
 }
-
 .botones {
     background: none;
     display: flex;
@@ -56,14 +48,11 @@ body {
     margin-bottom: 35px;
     margin-right: 10px;
 }
-
 .boton2 {
     margin-left: 40px;
     display: flex;
     justify-content: space-around;
-
 }
-
 button {
     font-size: 30px;
     background: none;
@@ -71,7 +60,6 @@ button {
     outline: none;
     cursor: pointer;
 }
-
 /* Efecto de hover */
 #oneclik:hover,
 .boton1:hover,
@@ -79,7 +67,6 @@ button {
 .boton2:hover {
     transform: scale(1.1);
 }
-
 .reloj:hover {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.186);
@@ -90,9 +77,6 @@ button {
 .start-clone{
     display: none;
 }
-
-
-
 /* Define la animación de crecimiento y reducción */
 @keyframes growAndShrink {
     0% {
@@ -105,24 +89,10 @@ button {
         transform: scale(1);
     }
 }
-
 /* Aplica la animación cuando la clase "animate" está presente */
 .animate {
     animation: growAndShrink 1s ease-in-out infinite;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Media query para dispositivos con ancho máximo de 600px */
 /* Media query para dispositivos con ancho máximo de 600px */
 @media screen and (max-width: 720px) {
@@ -136,7 +106,6 @@ button {
         display: block;
         height: 130px;
     }
-
     .start{
         display: none;
     }
@@ -144,7 +113,6 @@ button {
         display: block;
         height: 130px;
     }
-
     .reloj{
     background: none;
     border: none;
@@ -154,7 +122,6 @@ button {
     .botones {
         flex-direction: column;
         font-size: auto;
-      
         justify-self:center;
         align-items: center;
         margin-right: 0;
@@ -162,7 +129,6 @@ button {
         gap: 0;
          /* Cambiamos la dirección de los botones a una columna */
     }
-    
     button {
         font-size: 3px; /* Reducimos el tamaño de fuente de los botones */
         margin-bottom: 10px;
@@ -172,5 +138,4 @@ button {
     .boton2{
         margin: 0 0;
     }
-    
 }
