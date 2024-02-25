@@ -7,46 +7,54 @@ function zfill(number, width) {
     return str;
 }
 
-var minutos = 0;
-var hora = 0;
+// Variables para minutos y horas
+
+var horas = 0;
 
 // Obtenemos el botón por su id
 var oneclikButton = document.getElementById('oneclik');
 
 // Añadimos un evento de click al botón
 oneclikButton.addEventListener('click', function() {
-    // Cuando se hace clic en el botón, se imprime "Hola" en la consola
+    // Cuando se hace clic en el botón, se llama a la función contarSegundos
     contarSegundos();
 });
 
 function contarSegundos() {
-    let segundos = 1;
-    minutos++ ;
+    let segundos = 0;
+    var minutos = 1;
     const intervalo = setInterval(function() {
-        segundos=zfill(segundos,2);
-        var secondsElemtens = document.getElementById("second");
-        secondsElemtens.textContent=segundos
-        console.log(segundos);
-        segundos++;
-    }, 1000); // Ejecutar cada segundo (1000 milisegundos)
+        // Rellenamos los segundos con ceros a la izquierda
+        var segundosFormateados = zfill(segundos, 2);
 
-    // Detener el contador después de cierto tiempo (por ejemplo, 10 segundos)
-    setTimeout(function() {
-        clearInterval(intervalo);
-        console.log("Contador detenido después de 10 segundos");
-        if (time > 9000){
+        // Actualizamos el elemento HTML con los segundos formateados
+        var secondsElement = document.getElementById("second");
+        secondsElement.textContent = segundosFormateados;
+
+        // Incrementamos los segundos
+        segundos++;
+
+        // Si los segundos alcanzan 60, reiniciamos los segundos y actualizamos los minutos
+        if (segundos == 10) {
             segundos = 0;
-            minutos = zfill(minutos, 2); // Utilizamos la función zfill para rellenar con ceros
-            var minutesElement = document.getElementById("minutes"); // Obtenemos el elemento HTML por su id
-            minutesElement.textContent = minutos; // Actualizamos el contenido del elemento HTML con los minutos formateados
-            console.log(minutos);
-            if (minutos == 60){
-                hora += 1;
-                minutos = 0;
-                console.log(hora);
-            }
+            
+            minutos = zfill(minutos, 2); // Rellenamos los minutos con ceros a la izquierda
+
+            // Actualizamos el elemento HTML con los minutos formateados
+            var minutesElement = document.getElementById("minutes");
+            minutesElement.textContent = minutos;
+            minutos++;
         }
-        contarSegundos();
-        time = 10000;
-    }, time = 10000); // 10 segundos en milisegundos
+            // Si los minutos alcanzan 60, reiniciamos los minutos y actualizamos las horas
+        if (minutos == 2) {
+                minutos = 0;
+              
+                horas = zfill(horas, 2); // Rellenamos las horas con ceros a la izquierda
+
+                // Actualizamos el elemento HTML con las horas formateadas
+                var hoursElement = document.getElementById("hours");
+                hoursElement.textContent = horas;
+                horas++;
+        }
+    }, 1000); // Ejecutar cada segundo (1000 milisegundos)
 }
